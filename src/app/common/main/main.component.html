@@ -1,0 +1,69 @@
+<section class="main-banner" style="background:#242c36 url(assets/img/slider-01.jpg) no-repeat">
+  <div class="container">
+    <div class="caption">
+      <h2>Search for a Quick Job</h2>
+      <form>
+        <fieldset>
+          <div class="col-md-4 col-sm-4 no-pad">
+            <input type="text" class="form-control border-right" placeholder="Skills" />
+          </div>
+
+          <div class="col-md-3 col-sm-3 no-pad">
+            <select class="selectpicker">
+              <option>Select Category</option>
+              <option>Accounting / Finance</option>
+              <option>Automotive Jobs</option>
+              <option>Construction / Facilities</option>
+              <option>Education Training</option>
+              <option>Healthcare</option>
+              <option>Restaurant / Food Service</option>
+              <option>Transportation / Logistics</option>
+              <option>Telecommunications</option>
+            </select>
+          </div>
+          
+                        <div class="col-md-3 col-sm-3 no-pad">
+            <select class="selectpicker border-right">
+              <option>Location</option>
+              <option>Aachen</option>
+              <option>Essen</option>
+              <option>Duisburg</option>
+              <option>koln</option>
+              <option>kleve</option>
+              <option>Minden</option>
+            </select>
+          </div>
+          <div class="col-md-2 col-sm-2 no-pad">
+            <input type="submit" class="btn seub-btn" value="submit" />
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Inner Banner -->
+
+
+<section class="jobs">
+<div class="container" >
+         <div class="row heading"></div>
+           <div class="companies" *ngFor="let item of collection| paginate: { itemsPerPage: 4, currentPage: p }">
+             <div class="company-list">      
+               <div class="row" >
+                 <div class="col-md-8 col-sm-8" >
+                   <div class="company-content">
+                     <h3>{{item.job}}</h3>
+                     <p><span class="company-name"><i class="fa fa-briefcase"></i>{{item.company}}</span><span class="company-location"><i class="fa fa-map-marker"></i> {{item.location}}</span><span class="package"><i class="fa fa-money"></i>{{item.Pay}}</span></p>
+                     <p>Category : {{item.category}}</p>
+                     <p>{{item.disc}}</p>
+                   </div>
+                 </div>
+                </div>
+              </div>
+            </div>
+   <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>	  
+</section>
