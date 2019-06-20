@@ -75,5 +75,11 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  ngOnClick(){
+  debugger;
+    this.collection=this.collection.filter(res=>{
+    return res.job.toLocaleLowerCase().match(this.ngOnClick.arguments.toLocaleLowerCase());
+    return res.category.toLocaleLowerCase().match(this.ngOnClick.arguments.toLocaleLowerCase());
+    });
+  }
 }

@@ -2,13 +2,13 @@
   <div class="container">
     <div class="caption">
       <h2>Search for a Quick Job</h2>
-      <form>
+      <form ng-model="searchText">
         <fieldset>
-          <div class="col-md-4 col-sm-4 no-pad">
+          <div class="col-md-5 col-sm-5 no-pad">
             <input type="text" class="form-control border-right" placeholder="Skills" />
           </div>
 
-          <div class="col-md-3 col-sm-3 no-pad">
+          <div class="col-md-4 col-sm-4 no-pad">
             <select class="selectpicker">
               <option>Select Category</option>
               <option>Accounting / Finance</option>
@@ -22,20 +22,11 @@
             </select>
           </div>
           
-                        <div class="col-md-3 col-sm-3 no-pad">
-            <select class="selectpicker border-right">
-              <option>Location</option>
-              <option>Aachen</option>
-              <option>Essen</option>
-              <option>Duisburg</option>
-              <option>koln</option>
-              <option>kleve</option>
-              <option>Minden</option>
-            </select>
+                      
+          <div class="col-md-3 col-sm-3 no-pad">
+            <input type="submit" class="btn seub-btn" value="submit" (click)="ngOnClick()"/>
           </div>
-          <div class="col-md-2 col-sm-2 no-pad">
-            <input type="submit" class="btn seub-btn" value="submit" />
-          </div>
+         
         </fieldset>
       </form>
     </div>

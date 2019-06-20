@@ -13,25 +13,22 @@
 
         <div  data-validate = "Valid email is required: ex@abc.xyz">
           <span class="label-input100">Email</span>
-          <input class="form-control input-lg" type="text" name="email" placeholder="Email addess...">
+          <input class="form-control input-lg" type="text" name="email" placeholder="Email addess..." id="eml" name="email" title="Format: xxx@xxx.com" 
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
           <span class="focus-input100"></span>
         </div>
 
-        <div  data-validate="Username is required">
-          <span class="label-input100">Username</span>
-          <input class="form-control input-lg" type="text" name="username" placeholder="Username...">
-          <span class="focus-input100"></span>
-        </div>
+        
 
         <div  data-validate = "Password is required">
           <span class="label-input100">Password</span>
-          <input class="form-control input-lg" type="text" name="pass" placeholder="*************">
+          <input class="form-control input-lg" type="password" name="pass" placeholder="*************" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
           <span class="focus-input100"></span>
         </div>
 
         <div  data-validate = "Repeat Password is required">
           <span class="label-input100">Repeat Password</span>
-          <input class="form-control input-lg" type="text" name="repeat-pass" placeholder="*************">
+          <input class="form-control input-lg" type="password" name="repeat-pass" placeholder="*************" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
           <span class="focus-input100"></span>
         </div>
 
